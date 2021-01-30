@@ -1,0 +1,39 @@
+﻿/*Задача 10. Напишете програма на С, която съдържа 3 функции,
+изнесете прототипите им в отделен .h файл.
+1. Първата функция да калкулира най-малко общо кратно на две положителни
+числа.
+2. Втората функция връща абсолютна стойност на числата (положителната
+стойност на числата).
+a. Трябва да може да приеме като параметър float и да върне float.
+b. Тествайте с инт и float.
+3. Напишете функция, която калкулира корен квадратен от число.
+a. Проверете дали резултатът е отрицателно число и върнете -1.
+b. Използвайте втората си функция, за да обърнете числото в положително и
+да намерите корен квадратен от него.*/
+#include <stdio.h>
+#include "f.h"
+int main(){
+
+ int x, b, d;
+ double c;
+    printf("Please enter one positive integer number for NOK\n");
+    scanf("%d",&x);
+    printf("Please enter one positive integer number for NOK\n");
+    scanf("%d",&b);
+
+    printf("Please enter a value for a double number\n");
+    scanf("%lf",&c);
+    printf("Please enter a value for integer number for sqrt function\n");
+    scanf("%d",&d);
+
+    printf("NOK of %d and %d is: %d\n",x,b,nok(x,b));
+
+    printf("abs of %lf is: %lf\n",c,add(c));
+
+    printf("abs of %d is: %d\n",d,addInt(d));
+    printf("sqrt of %d is: %d\n",d,getSqrt(d));
+    printf("abs sqrt of %d is: %d\n",d,getAbsSqrt(d));
+
+ return 0;
+}
+

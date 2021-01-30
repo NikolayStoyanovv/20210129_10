@@ -1,0 +1,6 @@
+﻿
+int nok(int a , int b);
+double add(double number);
+int addInt(int number);
+int getSqrt(int number);
+int getAbsSqrt(int number);

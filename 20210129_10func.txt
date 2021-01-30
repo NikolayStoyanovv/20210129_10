@@ -1,0 +1,62 @@
+﻿#include<stdio.h>
+#include"f.h"
+int nok(int a , int b){
+
+
+    int aMembers[1000];
+    int bMembers[1000];
+    for (int i = 0; i < a; i++){
+        aMembers[i]=(i+1)*a;
+    }
+    for (int i = 0; i < b; i++){
+        bMembers[i]=(i+1)*b;
+    }
+
+    for (int j = 0; j < a; j++){
+
+        for (int k = 0; k < b; k++){
+
+         if (aMembers[j] == bMembers[k]){
+
+             return aMembers[j];
+         }
+         
+        }
+        
+    }
+    return a*b;
+}
+double add(double number){
+    return number >= 0.0 ? number : (number*(-2.0)+number);
+}
+
+int addInt(int number){
+    return number >= 0 ? number : (number*(-2)+number);
+}
+int getSqrt(int number){
+    double temp, sqrt;
+    sqrt = number / 2;
+    temp = 0;
+    if(number<0){
+        return -1;
+    }
+    while(sqrt != temp){
+        temp = sqrt;
+        sqrt = ( number/temp + temp) / 2;
+    }
+
+    return sqrt;
+}
+int getAbsSqrt(int number){
+    number = addInt(number);
+    double temp, sqrt;
+    sqrt = number / 2;
+    temp = 0;
+    while(sqrt != temp){
+        temp = sqrt;
+        sqrt = ( number/temp + temp) / 2;
+    }
+
+    return sqrt;
+}
+
